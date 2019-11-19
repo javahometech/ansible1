@@ -1,0 +1,9 @@
+---
+- hosts: 172.31.7.6
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: Install docker
+      yum:
+        name: git
+        state: present

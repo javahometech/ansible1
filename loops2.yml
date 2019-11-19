@@ -1,0 +1,12 @@
+---
+
+- hosts: 172.31.7.6
+  become: true
+  tasks:
+    - name: Install required packages
+      yum:
+        name: "{{item.name}}"
+        state: "{{item.state}}"
+      loop:
+        - {name: git, state: present}
+        - {name: docker, state: absent}

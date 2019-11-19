@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install git
+      yum:
+        name: git
+        state: present
+      when: 
+        - ansible_os_family == "RedHat"
+        - ansible_processor_cores == 2
