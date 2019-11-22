@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - debug:
+        msg: task-1 from one.yml
+    - debug:
+        msg: task-2 from one.yml

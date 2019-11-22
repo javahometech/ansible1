@@ -1,0 +1,4 @@
+- debug:
+    msg: task-1 from three.yml
+- debug:
+    msg: task-2 from three.yml

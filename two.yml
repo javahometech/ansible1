@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  tasks:
+    - debug:
+        msg: task-1 from two.yml
+    - debug:
+        msg: task-2 from two.yml
+    - name: Import three.yml
+      import_tasks: three.yml
+- name: include one.yml
+  import_playbook: one.yml
